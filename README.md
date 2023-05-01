@@ -3,7 +3,7 @@ A one-of-a-kind online resume builder for teaching professionals to build their 
 
 ## Screenshots
 
-![Homepage](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/home.png)
+![Homepage](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/homepage.png)
 
 ![Resume](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/resume.png)
 

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="Sundeep Reddy" content="" />
+        <title>{{data['salutation']+data['fullname']}}</title>
+        <link rel="icon" href="static/profileimgs/{{photo}}" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,800&display=swap">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+        <style type="text/css">
+            body { padding-top: 3.375rem; font-family: "Raleway", Arial, sans-serif; background: linear-gradient(270deg, #e3ffe780 0%, #d9e7ff80 100%); }
+            @media (min-width: 992px) {
+                body { padding-top: 0; padding-left: 17rem; }
+            }
+            svg { margin-right: 5px!important; width: 20px; height: 20px; }
+            h1, .h1 { line-height: 1; }
+            p.lead { font-size: 1.15rem; font-weight: 400; }
+            .bg-custom { background: linear-gradient(to right, #fdbb2d 0%, #3a1c71 100%); }
+            .subheading { font-weight: 500; font-size: 1.5rem; }
+            .navbar-collapse { text-align: center; }
+            #sideNav { padding-left: 1rem; padding-right: 1rem; }
+            #sideNav .navbar-nav .nav-item .nav-link { font-weight: 400; letter-spacing: 0.1rem; }
+            @media (min-width: 992px) {
+                .bg-custom { background: linear-gradient(to bottom, #fdbb2d 0%, #3a1c71 100%); }
+                #sideNav { padding-left: 0; padding-right: 0; text-align: center; position: fixed; top: 0; left: 0; display: flex; flex-direction: column; width: 17rem; height: 100vh; }
+                #sideNav .navbar-brand { display: flex; margin: auto auto 0; padding: 0.5rem; }
+                #sideNav .navbar-brand .img-profile { max-width: 10rem; max-height: 10rem; border: 0.5rem solid #ffffff33; }
+                #sideNav .navbar-collapse { display: flex; align-items: flex-start; flex-grow: 0; width: 100%; margin-bottom: auto; }
+                #sideNav .navbar-collapse .navbar-nav { flex-direction: column; width: 100%; }
+                #sideNav .navbar-collapse .navbar-nav .nav-item { display: block; }
+                #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link { display: block; }
+            }
+            .social-icons .social-icon { display: inline-flex; align-items: center; justify-content: center; height: 2rem; width: 2rem; background-color: #495057; color: #fff; border-radius: 100%; font-size: 1rem; margin-right: 1.5rem; }
+            .social-icons .social-icon:last-child { margin-right: 0; }
+            .social-icons .social-icon:hover { background-color: #0275d8; }
+            .social-icons svg { margin-right: 0 !important; }
+            .dev-icons { font-size: 3rem; }
+            section.resume-section { display: flex; align-items: center; padding-left: 1rem; padding-right: 1rem; padding-top: 5rem; padding-bottom: 5rem; max-width: 75rem; }
+            .thumbnail { padding: 0.1rem; margin: 0.1rem; background-color: #fff; border: 1px solid #dee2e6; border-radius: 0.25rem; max-width: 75%; height: auto; }
+            section.resume-section .resume-section-content { width: 100%; }
+            .designer { font-size: 0.8rem; text-align: center; }
+            @media (min-width: 768px) {
+                section.resume-section { min-height: 100vh; }
+            }
+            @media (min-width: 992px) {
+                section.resume-section { padding-left: 3rem; padding-right: 3rem; padding-top: 5rem; padding-bottom: 5rem; }
+            }
+        </style>
+    </head>
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XC6LSKSC3L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XC6LSKSC3L');
+    </script>
+    <!-- Google Tag End -->
+    <body id="home">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#home">
+                <span class="d-block d-lg-none display-6 fw-bold">{{data['salutation']+data['fullname']}}</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="static/profileimgs/{{photo}}" alt="{{data['salutation']+' '+data['fullname']}}" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><i class="fa-solid fa-address-card"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education"><i class="fa-solid fa-graduation-cap"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience"><i class="fa-solid fa-award"></i>Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#guidance"><i class="fa-solid fa-signs-post"></i>Research</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications"><i class="fa-solid fa-book"></i>Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests"><i class="fa-solid fa-list-check"></i>Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#others"><i class="fa-solid fa-grip-vertical"></i>Others</a></li>
+                    <li class="nav-item"><a class="btn btn-light btn-sm text-dark my-1" href="static/resumes/{{download}}" title="Download This Web Profile" download target="_blank"><small><i class="fa-solid fa-download"></i>Web Profile</small></a></li>
+                    <li class="nav-item"><a class="btn btn-primary btn-sm" href="/" title="Go To Home"><small><i class="fa-solid fa-home"></i>Go To Home</small></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navigation -->
+        <!-- Page Content -->
+        <div class="container-fluid p-0">
+            <!-- About -->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="display-4 my-3"><span class="text-primary">{{data['salutation']}}</span><span class="text-primary">{{data['fullname']}}</span></h1>
+                    <p class="display-6 my-3"><span class="text-info">{{data['designation']}}</span></p>
+                    <p class="display-6 my-3">Department of {{data['department']}}</p>
+                    <p class="display-6 my-3">{{data['college']}}</p>
+                    <p class="lead my-3"><i class="fa-solid fa-map-location-dot"></i>{{data['address']}}</p>
+                    <p class="lead my-3"><i class="fa-solid fa-phone"></i><span class="text-danger">{% for i in data['contacts'] %} <a href="tel:{{i}}">{{i}}</a> {% endfor %}&emsp;</span><i class="fa-solid fa-envelope"></i><span class="text-danger">{% for i in data['emails'] %} <a href="mailto:{{i}}">{{i}}</a> {% endfor %}</span></p>
+                    <div class="social-icons my-3">
+                        {% if data['linkedin'] %}
+                        <a class="social-icon" href="{{data['linkedin']}}"><i class="fab fa-linkedin-in"></i></a>
+                        {% endif %}
+                        {% if data['twitter'] %}
+                        <a class="social-icon" href="{{data['twitter']}}"><i class="fab fa-twitter"></i></a>
+                        {% endif %}
+                        {% if data['facebook'] %}
+                        <a class="social-icon" href="{{data['facebook']}}"><i class="fab fa-facebook-f"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+            <!-- End About -->
+            <hr class="m-0" />
+            <!-- Education -->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h3 class="my-1"><span class="text-primary">Education</span></h3>
+                    {% if data['qualdict'] %}
+                    {% for i in range(1,10) %}
+                    {% if data['qualdict']['qualification{0}'.format(i)] %}
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-2">
+                        <div class="flex-grow-1">
+                            <div class="my-1 text-info"><i class="fa-solid fa-medal"></i>{{data['qualdict']['qualification{0}'.format(i)]}}</div>
+                            <div class="my-1 text-dark"><i class="fa-solid fa-school"></i>{{data['qualdict']['qualuniv{0}'.format(i)]}}</div>
+                        </div>
+                        <div class="flex-shrink-0 text-success"><i class="fa-solid fa-calendar-days"></i>{{data['qualdict']['qualfrom{0}'.format(i)]}} &emdash; {{data['qualdict']['qualto{0}'.format(i)]}}</div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </section>
+            <!-- End Education -->
+            <hr class="m-0" />
+            <!-- Experience -->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h3 class="my-2"><span class="text-success">Experience</span></h3>
+                    {% if data['expdict'] %}
+                    {% for i in range(1,10) %}
+                    {% if data['expdict']['exprole{0}'.format(i)] %}
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-2">
+                        <div class="flex-grow-1">
+                            <div class="my-1 text-info"><i class="fa-solid fa-medal"></i>{{data['expdict']['exprole{0}'.format(i)]}}</div>
+                            <div class="my-1 text-dark"><i class="fa-solid fa-school"></i>{{data['expdict']['expdept{0}'.format(i)]}}</div>
+                            <div class="my-1 text-primary"><i class="fa-solid fa-school"></i>{{data['expdict']['exporg{0}'.format(i)]}}</div>
+                        </div>
+                        <div class="flex-shrink-0 text-success"><i class="fa-solid fa-calendar-days"></i>{{data['expdict']['expfrom{0}'.format(i)]}} &emdash; {{data['expdict']['expto{0}'.format(i)]}}</div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% endif %}
+                    {% if data['profsocieties'] %}
+                    <h3 class="my-2"><span class="text-success">Professional Societies</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['profsocieties'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            <!-- End Experience -->
+            <hr class="m-0" />
+            <!-- Research -->
+            <section class="resume-section" id="guidance">
+                <div class="resume-section-content">
+                    {% if (data['nphd'] or data['nmtech'] or data['nbtech']) %}
+                    <h3 class="my-2"><span class="text-danger">Theses Guided</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-2">
+                        {%if data['nphd'] %}
+                        <div class="col">No. of Ph.D Theses Guided - <span class="fw-bold">{{data['nphd']}}</span></div>
+                        {% endif %}
+                        {%if data['nmtech'] %}
+                        <div class="col">No. of M.Tech Theses Guided - <span class="fw-bold">{{data['nmtech']}}</span></div>
+                        {% endif %}
+                        {%if data['nbtech'] %}
+                        <div class="col">No. of B.Tech Theses Guided - <span class="fw-bold">{{data['nbtech']}}</span></div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    {% if data['phdguided'] %}
+                    <h3 class="my-2"><span class="text-danger">Ph.Ds Guided</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-2 text-center table-responsive">
+                        <table class="table table-sm table-striped table-hover">
+                            <thead><tr><th scope="col">Sl.</th><th scope="col">Research Scholar</th><th scope="col">Research Work</th><th scope="col">Year of Award</th><th scope="col">Registered University/Institute</th><th scope="col">Level of Guidance</th></tr></thead>
+                            <tbody>
+                            {% for item in data['phdguided'] %}
+                                <tr><td>{{loop.index}}</td><td>{{item[0]}}</td><td>{{item[1]}}</td><td>{{item[2]}}</td><td>{{item[3]}}</td><td>{{item[4]}}</td></tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
+                    {% if data['projects'] %}
+                    <h3 class="my-2"><span class="text-danger">Research Projects</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-2 text-center table-responsive">
+                        <table class="table table-sm table-striped table-hover">
+                            <thead><tr><th scope="col">Sl.</th><th scope="col">Scheme</th><th scope="col">Agency</th><th scope="col">Coordinator(s)</th><th scope="col">Project Title</th><th scope="col">Year</th><th scope="col">Amount (Rs.)</th></tr></thead>
+                            <tbody>
+                            {% for item in data['projects'] %}
+                                <tr><td>{{loop.index}}</td><td>{{item[0]}}</td><td>{{item[1]}}</td><td>{{item[2]}}</td><td>{{item[3]}}</td><td>{{item[4]}}</td><td>{{item[5]}}</td></tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            <!-- End Research -->
+            <hr class="m-0" />
+            <!-- Publications -->
+            <section class="resume-section" id="publications">
+                <div class="resume-section-content">
+                    <h3 class="my-1"><span class="text-info">Publication Profiles</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-2 text-center">
+                        {% if data['googlescholar'] %}
+                        <div class="col"><a href="{{data['googlescholar']}}"><img src="static/images/googlescholarlogo.png" width="100px" alt="Google Scholar URL"></a></div>
+                        {% endif %}
+                        {% if data['vidwan'] %}
+                        <div class="col"><a href="{{data['vidwan']}}"><img src="static/images/vidwanlogo.png" width="100px" alt="Vidwan URL"></a></div>
+                        {% endif %}
+                        {% if data['scopus'] %}
+                        <div class="col"><a href="{{data['scopus']}}"><img src="static/images/scopuslogo.png" width="100px" alt="Scopus URL"></a></div>
+                        {% endif %}
+                        {% if data['orcid'] %}
+                        <div class="col"><a href="{{data['orcid']}}"><img src="static/images/orcidlogo.png" width="100px" alt="Orcid URL"></a></div>
+                        {% endif %}
+                        {% if data['webofscience'] %}
+                        <div class="col"><a href="{{data['webofscience']}}"><img src="static/images/webofsciencelogo.png" width="100px" alt="Web of Science URL"></a></div>
+                        {% endif %}
+                        {% if data['researchgate'] %}
+                        <div class="col"><a href="{{data['researchgate']}}"><img src="static/images/researchgatelogo.png" width="100px" alt="ResearchGate URL"></a></div>
+                        {% endif %}
+                    </div>
+                    {% if data['intjournals'] %}
+                    <h3 class="my-1"><span class="text-info">International Journals</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['intjournals'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% if data['natjournals'] %}
+                    <h3 class="my-1"><span class="text-info">National Journals</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['natjournals'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% if data['intconfs'] %}
+                    <h3 class="my-1"><span class="text-info">International Conferences</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['intconfs'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% if data['natconfs'] %}
+                    <h3 class="my-1"><span class="text-info">National Conferences</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['natconfs'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            <!-- End Publications -->
+            <hr class="m-0" />
+            <!-- Interests -->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    {% if data['interests'] %}
+                    <h3 class="my-1"><span class="text-danger">Areas of Interest</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['interests'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% if data['evescourses'] %}
+                    <h3 class="my-1"><span class="text-danger">Events/Courses Organized</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['evescourses'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            <!-- End Interests -->
+            <hr class="m-0" />
+            <!-- Others -->
+            <section class="resume-section" id="others">
+                <div class="resume-section-content">
+                    {% if data['achievements'] %}
+                    <h3 class="my-1"><span class="text-success">Achievements</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['achievements'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% if data['adminpos'] %}
+                    <h3 class="my-1"><span class="text-success">Administrative Positions</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['adminpos'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% if data['otherresp'] %}
+                    <h3 class="my-1"><span class="text-success">Other Responsibilities</span></h3>
+                    <div class="d-flex flex-column flex-md-row justify-content-between my-1">
+                        <ul>
+                        {% for i in data['otherresp'] %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <hr class="m-0" />
+        <div class="designer fixed-bottom bg-light p-1 text-primary">Designed with &#x1F49A; by <a href="https://github.com/sundeepkrv">@sundeepkrv</a></div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script type="text/javascript">
+            window.addEventListener('DOMContentLoaded', event => {
+                const sideNav = document.body.querySelector('#sideNav');
+                if (sideNav) {
+                    new bootstrap.ScrollSpy(document.body, {
+                        target: '#sideNav',
+                        offset: 74,
+                    });
+                };
+                const navbarToggler = document.body.querySelector('.navbar-toggler');
+                const responsiveNavItems = [].slice.call( document.querySelectorAll('#navbarResponsive .nav-link') );
+                responsiveNavItems.map(function (responsiveNavItem) {
+                    responsiveNavItem.addEventListener('click', () => {
+                        if (window.getComputedStyle(navbarToggler).display !== 'none') { navbarToggler.click(); }
+                    });
+                });
+
+                });
+        </script>
+    </body>
+</html>

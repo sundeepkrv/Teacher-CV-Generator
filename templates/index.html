@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Online Resume Builder</title>
+  <link href="static/images/indexfavicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.5.0/sweetalert2.min.css" rel="stylesheet" type="text/css">
+  <link href="static/css/indexstyle.css" rel="stylesheet">
+</head>
+<!-- Google Tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XC6LSKSC3L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XC6LSKSC3L');
+</script>
+<!-- Google Tag End -->
+<body>
+  <!-- Header -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo"><img src="static/images/indexlogo.png" alt="Logo" class="img-fluid"></a>
+      <!-- Navbar -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero"><i class="fa-solid fa-home mb-2"></i></a></li>
+          <li><a class="nav-link scrollto" href="#basic">Basic Details</a></li>
+          <li><a class="nav-link scrollto" href="#acadexp">Academics/Experience</a></li>
+          <li><a class="nav-link scrollto" href="#publications">Research</a></li>
+          <li><a class="nav-link scrollto" href="#inteves">Interests/Activities</a></li>
+          <li><a class="nav-link scrollto" href="#others">Others</a></li>
+        </ul>
+        <span><i class="fa-solid fa-bars mobile-nav-toggle"></i></span>
+      </nav>
+      <!-- End Navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Hero -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-lg text-center mb-5">
+          <h1>Welcome to Online Resume Builder for Teaching Professionals</h1>
+          <h2>This site has been crafted to meet the requirements of a teaching professional to build his/her own online profile which can be hosted on their/college website to have intuitive online presence.</h2>
+          <h2>Fill in the below form with your details and click on the <code>Create My Web Profile</code> button on the right side of the page to generate your web profile.</h2>
+          <h2>On your generated web profile, click on <code><i class="fa-solid fa-download"></i> Web Profile</code> button to download your profile in <code>zip</code> format containing a <code>html</code> file and <code>your uploaded image</code>.</h2>
+          <h2>You can edit the <code>html</code> content in your favourite code editor (like VS Code, Sublime Text, Notepad++ or Notepad etc.). Preview your profile in Chrome/Firefox/Safari and adjust for any css styles if not rendered properly.</h2>
+          <h2>Use this <code>html</code> code on your website to have an intuitive resume. You can also get the beautiful print of the resume or save as a PDF using Chrome/Firefox.</h2>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#basic" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+  <!-- Main -->
+  <main id="main text-center">
+    <form id="myform" autocomplete="on" method="POST" enctype="multipart/form-data">
+    <!-- Basic Details -->
+    <section id="basic">
+      <div class="container">
+        <div class="section-title"><h3>Basic Details</h3></div>
+        <div class="row g-1">
+            <div class="col-md-2 my-1">
+                <select class="form-select" aria-label="Salutation" id="salutation" name="salutation">
+                    <option selected>-Salutation-</option>
+                    <option value="Mr. ">Mr.</option>
+                    <option value="Ms. ">Ms.</option>
+                    <option value="Smt. ">Smt.</option>
+                    <option value="Dr. ">Dr.</option>
+                </select>
+            </div>
+            <div class="col-md-4 my-1">
+                <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" id="fullname" name="fullname">
+            </div>
+            <div class="col-md-2 my-1">
+                <select class="form-select" aria-label="Designation" id="designation" name="designation">
+                    <option selected>-Designation-</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Associate Professor">Associate Professor</option>
+                    <option value="Assistant Professor">Assistant Professor</option>
+                    <option value="Lecturer">Lecturer</option>
+                </select>
+            </div>
+            <div class="col-md-4 my-1">
+                <select class="form-select" aria-label="Department" id="department" name="department">
+                    <option selected>-Department-</option>
+                    <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+                    <option value="Chemical Engineering">Chemical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                    <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                    <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Instrumentation and Control Engineering">Instrumentation and Control Engineering</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Mathematics and Humanities">Mathematics and Humanities</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Computer Applications">Computer Applications</option>
+                    <option value="Management Sciences">Management Sciences</option>
+                </select>
+            </div>
+        </div>
+        <div class="row g-1">
+          <div class="col-md-12 my-1">
+            <input type="text" class="form-control" placeholder="College" aria-label="College" id="college" name="college">
+          </div>
+        </div>
+        <div class="row g-1">
+            <div class="col-md-4 my-1">
+                <input type="text" class="form-control" placeholder="Address" aria-label="Address" id="address" name="address">
+            </div>
+            <div class="col-md-4 my-1">
+                <input type="text" class="form-control" placeholder="Emails (separated by semi-colon ;)" aria-label="Emails" id="emails" name="emails">
+            </div>
+            <div class="col-md-4 my-1">
+                <input type="text" class="form-control" placeholder="Contact Numbers (separated by semi-colon ;)" aria-label="Contacts" id="contacts" name="contacts">
+            </div>
+        </div>
+        <div class="row g-1">
+            <div class="col-md-10 my-1">
+                <div class="row-sm">
+                    <textarea class="form-control" placeholder="About Me" aria-label="About Me" rows="4" id="aboutme" name="aboutme"></textarea>
+                </div>
+                <div class="row g-1">
+                    <div class="col-md-4 mb-1 mt-2">
+                        <input type="url" class="form-control" placeholder="LinkedIn Profile" aria-label="LinkedIn" id="linkedin" name="linkedin">
+                    </div>
+                    <div class="col-md-4 mb-1 mt-2">
+                        <input type="url" class="form-control" placeholder="Twitter Profile" aria-label="Twitter" id="twitter" name="twitter">
+                    </div>
+                    <div class="col-md-4 mb-1 mt-2">
+                        <input type="url" class="form-control" placeholder="Facebook Profile" aria-label="Facebook" id="facebook" name="facebook">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 my-1">
+                <div class="row-sm-3 my-0 photo-btn-wrapper">
+                    <button class="btn btn-sm btn-danger btn-sm">Upload Photo</button>
+                    <input type="file" class="form-control form" aria-label="Choose Photo" id="photo" onchange="preview()" name="photo">
+                </div>
+                <div class="row-sm-1 my-0">
+                    <img src="" id="frame"><span id="phototip">Only jpg/jpeg/png files with atleast 300x300px resolution. Min 50KB and Max 1MB.</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Basic Details -->
+    <!-- Academics and Experience -->
+    <section id="acadexp">
+      <div class="container">
+        <div class="section-title"><h3>Academic Qualifications</h3></div>
+        <div class="row g-1 my-1" id="academic1">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 1" aria-label="Academic Qualification" id="qualification1" name="qualification1">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom1" name="qualfrom1">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto1" name="qualto1">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv1" name="qualuniv1">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose1"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1" id="academic2">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 2" aria-label="Academic Qualification" id="qualification2" name="qualification2">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom2" name="qualfrom2">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto2" name="qualto2">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv2" name="qualuniv2">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose2"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1" id="academic3">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 3" aria-label="Academic Qualification" id="qualification3" name="qualification3">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom3" name="qualfrom3">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto3" name="qualto3">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv3" name="qualuniv3">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose3"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1" id="academic4">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 4" aria-label="Academic Qualification" id="qualification4" name="qualification4">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom4" name="qualfrom4">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto4" name="qualto4">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv4" name="qualuniv4">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose4"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="academic5">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 5" aria-label="Academic Qualification" id="qualification5" name="qualification5">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom5" name="qualfrom5">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto5" name="qualto5">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv5" name="qualuniv5">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose5"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="academic6">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 6" aria-label="Academic Qualification" id="qualification6" name="qualification6">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom6" name="qualfrom6">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto6" name="qualto6">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv6" name="qualuniv6">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose6"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="academic7">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 7" aria-label="Academic Qualification" id="qualification7" name="qualification7">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom7" name="qualfrom7">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto7" name="qualto7">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv7" name="qualuniv7">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose7"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="academic8">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 8" aria-label="Academic Qualification" id="qualification8" name="qualification8">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom8" name="qualfrom8">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto8" name="qualto8">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv8" name="qualuniv8">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose8"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="academic9">
+          <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Academic Qualification 9" aria-label="Academic Qualification" id="qualification9" name="qualification9">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="qualfrom9" name="qualfrom9">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="qualto9" name="qualto9">
+          </div>
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="University / College" aria-label="University / College" id="qualuniv9" name="qualuniv9">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Qualification" id="qclose9"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm">
+            <button type="button" class="btn btn-primary" id="addQual">+&emsp;Add Qualification</button>
+          </div>
+        </div>
+        <div class="section-title"><h3>Experience</h3></div>
+        <div class="row g-1 my-1" id="experience1">
+          <div class="col-md-3">
+              <input type="text" class="form-control" placeholder="Designation 1" aria-label="Designation" id="exprole1" name="exprole1">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom1" name="expfrom1">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto1" name="expto1">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg1" name="exporg1">
+          </div>
+          <div class="col-md-2">
+              <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept1" name="expdept1">
+          </div>
+          <div class="col-md-1">
+              <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose1"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+        <div class="row g-1 my-1" id="experience2">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 2" aria-label="Designation" id="exprole2" name="exprole2">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom2" name="expfrom2">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto2" name="expto2">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg2" name="exporg2">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept2" name="expdept2">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose2"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1" id="experience3">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 3" aria-label="Designation" id="exprole3" name="exprole3">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom3" name="expfrom3">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto3" name="expto3">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg3" name="exporg3">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept3" name="expdept3">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose3"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1" id="experience4">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 4" aria-label="Designation" id="exprole4" name="exprole4">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom4" name="expfrom4">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto4" name="expto4">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg4" name="exporg4">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept4" name="expdept4">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose4"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="experience5">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 5" aria-label="Designation" id="exprole5" name="exprole5">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom5" name="expfrom5">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto5" name="expto5">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg5" name="exporg5">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept5" name="expdept5">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose5"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="experience6">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 6" aria-label="Designation" id="exprole6" name="exprole6">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom6" name="expfrom6">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto6" name="expto6">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg6" name="exporg6">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept6" name="expdept6">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose6"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="experience7">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 7" aria-label="Designation" id="exprole7" name="exprole7">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom7" name="expfrom7">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto7" name="expto7">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg7" name="exporg7">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept7" name="expdept7">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose7"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="experience8">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 8" aria-label="Designation" id="exprole8" name="exprole8">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom8" name="expfrom8">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto8" name="expto8">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg8" name="exporg8">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept8" name="expdept8">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose8"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row g-1 my-1 d-none" id="experience9">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Designation 9" aria-label="Designation" id="exprole9" name="exprole9">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="From Year (YYYY)" aria-label="From Year" id="expfrom9" name="expfrom9">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="To Year (YYYY)" aria-label="To Year" id="expto9" name="expto9">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="College / Organization" aria-label="College / Organization" id="exporg9" name="exporg9">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" placeholder="Department / Group" aria-label="Department / Group" id="expdept9" name="expdept9">
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip" data-bs-placement="auto" title="Remove Experience" id="eclose9"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-sm">
+            <button type="button" class="btn btn-primary" id="addExp">+&emsp;Add Experience</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Academics and Experience -->
+    <!-- Research -->
+    <section id="publications">
+      <div class="container">
+        <div class="section-title"><h3>Publication Profiles</h3></div>
+        <div class="row g-1">
+          <div class="col-md-4">
+              <input type="url" class="form-control" placeholder="Vidwan URL" aria-label="Vidwan URL" id="vidwan" name="vidwan">
+          </div>
+          <div class="col-md-4">
+              <input type="url" class="form-control" placeholder="Orcid URL" aria-label="Orcid URL" id="orcid" name="orcid">
+          </div>
+          <div class="col-md-4">
+              <input type="url" class="form-control" placeholder="Web of Science URL (Formerly Publons)" aria-label="Web of Science URL" id="webofscience" name="webofscience">
+          </div>
+          <div class="col-md-4">
+              <input type="url" class="form-control" placeholder="Google Scholar URL" aria-label="Google Scholar URL" id="googlescholar" name="googlescholar">
+          </div>
+          <div class="col-md-4">
+              <input type="url" class="form-control" placeholder="Scopus URL" aria-label="Scopus URL" id="scopus" name="scopus">
+          </div>
+          <div class="col-md-4">
+              <input type="url" class="form-control" placeholder="ResearchGate URL" aria-label="ResearchGate URL" id="researchgate" name="researchgate">
+          </div>
+        </div>
+        <div class="section-title"><h3>Theses Guided</h3></div>
+        <div class="row g-1 mb-1">
+          <div class="col-md-4">
+              <input type="number" class="form-control" placeholder="No. of Ph.D Theses Guided" aria-label="Ph.D Theses Guided" id="nphd" name="nphd">
+          </div>
+          <div class="col-md-4">
+              <input type="number" class="form-control" placeholder="No. of M.Tech Theses Guided" aria-label="M.Tech Theses Guided" id="nmtech" name="nmtech">
+          </div>
+          <div class="col-md-4">
+              <input type="number" class="form-control" placeholder="No. of B.Tech Theses Guided" aria-label="B.Tech Theses Guided" id="nbtech" name="nbtech">
+          </div>
+        </div>
+        <div class="section-title"><h3>Ph.Ds Guided</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Ph.Ds Guided (Enter Name of Research Scholar, Title of Research Work, Year of Award, Registered University/Institute, Level of Guidance) (multiple entries separated by semi-colon ;)" aria-label="Ph.Ds Guided" rows="3" id="phdguided" name="phdguided"></textarea>
+        </div>
+        <div class="section-title"><h3>Research Projects Undertaken</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Research Projects Undertaken (Enter Scheme, Agency, Coordinator(s), Project Title, Year, Amount (Rs.)) (multiple entries separated by semi-colon ;)" aria-label="Research Projects Undertaken" rows="3" id="projects" name="projects"></textarea>
+        </div>
+        <div class="section-title"><h3>International Journals</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="International Journals (multiple entries separated by semi-colon ;)" aria-label="International Journals" rows="3" id="intjournalsdetails" name="intjournalsdetails"></textarea>
+        </div>
+        <div class="section-title"><h3>National Journals</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="National Journals (multiple entries separated by semi-colon ;)" aria-label="National Journals" rows="3" id="natjournalsdetails" name="natjournalsdetails"></textarea>
+        </div>
+        <div class="section-title"><h3>International Conferences</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="International Conferences (multiple entries separated by semi-colon ;)" aria-label="International Conferences" rows="3" id="intconfdetails" name="intconfdetails"></textarea>
+        </div>
+        <div class="section-title"><h3>National Conferences</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="National Conferences (multiple entries separated by semi-colon ;)" aria-label="National Conferences" rows="3" id="natconfdetails" name="natconfdetails"></textarea>
+        </div>
+      </div>
+    </section>
+    <!-- End Research -->
+    <!-- Interest Areas -->
+    <section id="inteves">
+      <div class="container">
+        <div class="section-title"><h3>Professional Societies</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Professional Societies (multiple entries separated by semi-colon ;)" aria-label="Professional Societies" rows="3" id="profsocieties" name="profsocieties"></textarea>
+        </div>
+        <div class="section-title"><h3>Areas of Interest</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Interest Areas (multiple entries separated by semi-colon ;)" aria-label="Interest Areas" rows="3" id="interestareas" name="interestareas"></textarea>
+        </div>
+        <div class="section-title"><h3>Courses/Events Organized</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Courses/Events Organized (multiple entries multiple entried separated by semi-colon ;)" aria-label="Courses/Events Organized" rows="3" id="evescourses" name="evescourses"></textarea>
+        </div>
+        <div class="section-title"><h3>Achievements</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Achievements (multiple entries separated by semi-colon ;)" aria-label="Achievements" rows="3" id="achievementsdetails" name="achievementsdetails"></textarea>
+        </div>
+      </div>
+    </section>
+    <!-- End Interest Areas -->
+    <!-- Others -->
+    <section id="others">
+      <div class="container">
+        <div class="section-title"><h3>Administrative Positions Held</h3></div>
+        <div class="row g-1 mb-1">
+          <textarea class="form-control" placeholder="Administrative Positions (multiple entries separated by semi-colon ;)" aria-label="Administrative Positions" rows="3" id="adminposdetails" name="adminposdetails"></textarea>
+        </div>
+        <div class="section-title"><h3>Other Responsibilities</h3></div>
+        <div class="row g-1 mb-2">
+          <textarea class="form-control" placeholder="Other Responsibilities (multiple entries separated by semi-colon ;)" aria-label="Other Responsibilities" rows="3" id="otherresponsibilities" name="otherresponsibilities"></textarea>
+        </div>
+      </div>
+    </section>
+    <!-- End Others -->
+    <!-- Notes -->
+    <section id="notes">
+      <div class="container">
+        <div class="section-title"><h3>Notes</h3></div>
+        <div class="col-lg text-center mb-5">
+          <p>&rarr; Wherever there are multiple entries possible, separate entries by using semi-colon (;) symbol, if any.<br>&rarr; Ensure that you upload profile photo with minumum resolution and size.<br>&rarr; Keep your profile data to the best of your knowledge.<br>&rarr; There is no retrieval system for your past built resumes on this website.<br>&rarr; Ensure to download your profile data after generation as past resumes if any already prepared would be removed from the server within 24 hours.</p>
+        </div>
+        <div class="section-title"><h3>Disclaimer</h3></div>
+        <div class="col-lg text-center mb-5">
+          <p>This website neither certifies nor promotes the content filled by the user and cannot be held responsible for the correctness of the data filled by the user. No claims/losses entertained.</p>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container py-2 text-center">
+          <span>&copy; Copyright <a href="https://github.com/sundeepkrv">@sundeepkrv</a></span>
+    </div>
+  </footer>
+  <!-- End Footer -->
+  <div class="floatbtn"><button type="submit" class="btn btn-primary rounded-pill" id="createwebprofile">Create<br>My Web<br>Profile</button></div>
+  <a href="#" class="rounded-pill back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-arrow-up"></i></a>
+  </form>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.5.0/sweetalert2.min.js"></script>
+  <script src="static/js/indexjs.js"></script>
+</body>
+
+</html>

@@ -3,12 +3,14 @@ A one-of-a-kind online resume builder for teaching professionals to build their 
 
 ## Demo
 
-You can go to https://cvgenerator.onrender.com for live working website.
+You can go to https://skrv-cvgenerator.onrender.com for live working website.
 
 ## Screenshots
 
+### Homepage
 ![Homepage](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/homepage.png)
 
+### Sample Resume
 ![Sample Resume](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/samplresume.png)
 
 ## Deveopment

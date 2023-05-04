@@ -13,7 +13,7 @@ You can go to https://skrv-cvgenerator.onrender.com for live working website.
 ### Sample Resume
 ![Sample Resume](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/samplresume.png)
 
-## Deveopment
+## Development
 
 This app has been developed in flask using python.
 

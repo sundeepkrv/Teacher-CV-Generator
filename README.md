@@ -1,6 +1,10 @@
 # cvgenerator
 A one-of-a-kind online resume builder for teaching professionals to build their online presence and professional reach out (developed in flask)
 
+## Demo
+
+You can go to https://cvgenerator.onrender.com for live working website.
+
 ## Screenshots
 
 ![Homepage](https://raw.githubusercontent.com/sundeepkrv/cvgenerator/main/screenshots/homepage.png)
@@ -11,7 +15,7 @@ A one-of-a-kind online resume builder for teaching professionals to build their 
 
 This app has been developed in flask using python.
 
-## Running Locally
+## Deployment
 
 ### For Unix/MacOS
 
@@ -35,10 +39,16 @@ Create a virtual environment and install requirements
   pip install -r requirements.txt
 ```
 
-Start the server
+Start the server for local deployment
 
 ```bash
   python3 flask_app.py
+```
+
+Using gunicorn for production deployment
+
+```bash
+  gunicorn --workers:2 flask_app:app
 ```
 
 ### For Windows
@@ -63,10 +73,16 @@ Create a virtual environment and install requirements
   pip install -r requirements.txt
 ```
 
-Start the server
+Start the server for local deployment
 
 ```bash
-  python flask_app.py
+  python3 flask_app.py
+```
+
+Using gunicorn for production deployment
+
+```bash
+  gunicorn --workers:2 flask_app:app
 ```
 
 ### Running behind a proxy network
